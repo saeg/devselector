@@ -6,6 +6,7 @@ Instructions for installing and using devselector
 1. This project depends on the allocation algorithm developed by the Prof. Marcelo Lauretto, written in R. Alternatively, the group selection could be randomized. See the Experiment.callSequencialAllocationMethod() for details.
 
 2. Create a folder  structure <path>/webfiles/io for the allocation files. The webfiles folder will contain allocation.sh and drvalloc01.r files. The io folder will contain alpha.txt, q.txt, and w.txt files. Also, devselector will create the allocation files inside io, which includes freq.csv and matrix.csv.
+
 - allocation.sh: script that calls drvalloc01.r
 - drvalloc01.r: allocation algorithm responsible for selecting a group for the participant
 - alpha.txt: score of randomness for the algorithm, which varies from 0.0 to 1.0. A lower score means less randomness.
