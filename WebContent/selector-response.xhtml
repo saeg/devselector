@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+<h:head>
+  <title>Link para a Máquina Virtual do experimento</title>
+</h:head>
+
+<h:body>
+	<c:if test="#{experience.id > 0}">
+		Obrigado por preencher o questionário!<br/><br/>
+		Para realizar o experimento, clique no link a seguir para fazer o download da máquina virtual: <h:outputLink value="#{experience.selectedVmLink}">#{experience.selectedVmLink}</h:outputLink><br/><br/>
+		Login do usuário: #{experience.selectedLogin}<br/><br/>
+		Senha: #{experience.selectedPassword}<br/><br/>
+		Seu número identificador (ID) é: #{experience.id}. <br/>Por favor guarde esse ID, você irá precisar dele para realizar o experimento e também para preencher o questionário final. 
+		<br/>
+		Você pode imprimir essa página ou salvá-la como pdf.		
+		<br/><br/> 
+		O material de treinamento e as instruções para o experimento estão disponíveis na área de trabalho da máquina virtual.
+		<br/>Comece lendo o arquivo jaguar-tool.pdf.<br/><br/> 
+	</c:if>
+	<c:if test="#{experience.id == 0}">
+		Obrigado por preencher o questionário!<br/><br/>
+		Como você não possui a experiência mínima desejada em Java, não será possível sua participação no experimento.
+	</c:if>
+</h:body>
+
+</html>

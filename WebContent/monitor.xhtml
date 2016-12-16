@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+  <title>Group distribution</title>
+  <h:outputStylesheet library="css" name="table-style.css"/>
+</h:head>
+
+<body>
+
+	<!-- <h:form>
+		<h:commandButton value="Update" action="#{monitor.update()}" />
+	</h:form> -->
+	
+	<br/><br/>
+	<!--<h:graphicImage value="http://www.tutorialspoint.com/images/jsf-mini-logo.png"/>-->
+	<h:graphicImage library="images" name="histogram.png" cache="false" width="800"/>
+	<br/><br/>
+	<h2>Participants</h2>
+	<h:dataTable value="#{monitor.groupMatrix}" var="dev" 
+		styleClass="order-table" 
+		headerClass="order-table-header" 
+		rowClasses="order-table-odd-row,order-table-even-row">
+		
+		<h:column>
+			<f:facet name="header">ID</f:facet>
+			#{dev[0]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Java-Basic</f:facet>
+			#{dev[1]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Java-Intermediate</f:facet>
+			#{dev[2]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Java-Advanced</f:facet>
+			#{dev[3]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">IDE-None</f:facet>
+			#{dev[4]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">IDE-Basic</f:facet>
+			#{dev[5]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">IDE-Intermediate</f:facet>
+			#{dev[6]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">IDE-Advanced</f:facet>
+			#{dev[7]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">JUnit-None</f:facet>
+			#{dev[8]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">JUnit-Basic</f:facet>
+			#{dev[9]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">JUnit-Intermediate</f:facet>
+			#{dev[10]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">JUnit-Advanced</f:facet>
+			#{dev[11]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Group</f:facet>
+			#{dev[12]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Status</f:facet>
+			#{dev[13]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Timestamp</f:facet>
+			#{dev[14]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Development</f:facet>
+			#{dev[15]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Professional</f:facet>
+			#{dev[16]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Java</f:facet>
+			#{dev[17]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">IDEs</f:facet>
+			#{dev[18]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">JUnit</f:facet>
+			#{dev[19]}
+		</h:column>
+	</h:dataTable>
+	<br/><br/>
+	
+	<h2>Group Distribution - Cumulative Frequency</h2>
+	<h:dataTable value="#{monitor.frequencyMatrix}" var="freq" 
+		styleClass="order-table" 
+		headerClass="order-table-header" 
+		rowClasses="order-table-odd-row,order-table-even-row">
+		
+		<h:column>
+			<f:facet name="header">Group</f:facet>
+			#{monitor.frequencyMatrix.indexOf(freq)+1}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Java-Basic</f:facet>
+			#{freq[0]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Java-Intermediate</f:facet>
+			#{freq[1]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Java-Advanced</f:facet>
+			#{freq[2]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">IDE-None</f:facet>
+			#{freq[3]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">IDE-Basic</f:facet>
+			#{freq[4]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">IDE-Intermediate</f:facet>
+			#{freq[5]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">IDE-Advanced</f:facet>
+			#{freq[6]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">JUnit-None</f:facet>
+			#{freq[7]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">JUnit-Basic</f:facet>
+			#{freq[8]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">JUnit-Intermediate</f:facet>
+			#{freq[9]}
+		</h:column>
+		<h:column>
+			<f:facet name="header">JUnit-Advanced</f:facet>
+			#{freq[10]}
+		</h:column>
+	</h:dataTable>
+	
+	
+</body>
+
+</html>

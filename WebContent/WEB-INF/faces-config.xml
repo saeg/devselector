@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+	<navigation-rule>
+		<from-view-id>/selector-form.xhtml</from-view-id>
+  		<navigation-case>
+   			<!-- <from-outcome>#{experience.group}</from-outcome> -->
+   			<from-action>#{experience.selectVM()}</from-action>
+   			<to-view-id>/selector-response.xhtml</to-view-id>
+  		</navigation-case>
+  	</navigation-rule>
+
+</faces-config>

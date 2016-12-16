@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+  <title>Questionnaire - Developer's experience</title>
+</h:head>
+
+<h:body id="questionnaire">
+	<h2>Experimento sobre localização de defeitos</h2>
+	<h3>Questionário sobre conhecimento técnico em Java, IDEs, e ferramentas de teste.</h3>
+	As questões a seguir são relativas à sua experiência nas tecnologias avaliadas no experimento.<br/><br/>
+	<h:form>
+		Há quantos anos você programa? (Experiência educacional e profissional em qualquer linguagem)<br/>
+		<h:selectOneMenu value="#{experience.generalExperience}">
+			<f:selectItem itemValue="0" itemLabel="0"/>
+			<f:selectItem itemValue="1" itemLabel="1"/>
+			<f:selectItem itemValue="2" itemLabel="2"/>
+			<f:selectItem itemValue="3" itemLabel="3"/>
+			<f:selectItem itemValue="4" itemLabel="4"/>
+			<f:selectItem itemValue="5" itemLabel="5"/>
+			<f:selectItem itemValue="6" itemLabel="6"/>
+			<f:selectItem itemValue="7" itemLabel="7"/>
+			<f:selectItem itemValue="8" itemLabel="8"/>
+			<f:selectItem itemValue="9" itemLabel="9"/>
+			<f:selectItem itemValue="10" itemLabel="10 ou mais"/>
+		</h:selectOneMenu>
+		<br/><br/>
+		Há quantos anos você programa profissionalmente? (Considerando qualquer linguagem)<br/>
+		<h:selectOneMenu value="#{experience.professionalExperience}">
+			<f:selectItem itemValue="0" itemLabel="0"/>
+			<f:selectItem itemValue="1" itemLabel="1"/>
+			<f:selectItem itemValue="2" itemLabel="2"/>
+			<f:selectItem itemValue="3" itemLabel="3"/>
+			<f:selectItem itemValue="4" itemLabel="4"/>
+			<f:selectItem itemValue="5" itemLabel="5"/>
+			<f:selectItem itemValue="6" itemLabel="6"/>
+			<f:selectItem itemValue="7" itemLabel="7"/>
+			<f:selectItem itemValue="8" itemLabel="8"/>
+			<f:selectItem itemValue="9" itemLabel="9"/>
+			<f:selectItem itemValue="10" itemLabel="10 ou mais"/>
+		</h:selectOneMenu>
+		<br/><br/>
+		Há quantos anos você programa em Java?<br/>
+		<h:selectOneMenu value="#{experience.javaExperience}">
+			<f:selectItem itemValue="0" itemLabel="0"/>
+			<f:selectItem itemValue="1" itemLabel="1"/>
+			<f:selectItem itemValue="2" itemLabel="2"/>
+			<f:selectItem itemValue="3" itemLabel="3"/>
+			<f:selectItem itemValue="4" itemLabel="4"/>
+			<f:selectItem itemValue="5" itemLabel="5"/>
+			<f:selectItem itemValue="6" itemLabel="6"/>
+			<f:selectItem itemValue="7" itemLabel="7"/>
+			<f:selectItem itemValue="8" itemLabel="8"/>
+			<f:selectItem itemValue="9" itemLabel="9"/>
+			<f:selectItem itemValue="10" itemLabel="10 ou mais"/>
+		</h:selectOneMenu>
+		<br/><br/>
+		Como você avalia seu atual nível de conhecimento em Java?<br/>
+		<h:selectOneMenu value="#{experience.selfEvaluationJava}">
+			<f:selectItem itemValue="0" itemLabel="não tenho conhecimento"/>
+			<f:selectItem itemValue="1" itemLabel="básico - uso esporadicamente / uso para desenvolver pequenos programas"/>
+			<f:selectItem itemValue="2" itemLabel="intermediário - uso com frequência moderada / uso para desenvolvimento de alguns programas grandes"/>
+			<f:selectItem itemValue="3" itemLabel="avançado - uso constantemente / uso para desenvolvimento de diversos programas grandes"/>
+		</h:selectOneMenu>
+		<br/><br/>
+		Há quantos anos você programa usando Eclipse, Netbeans e/ou Intellij IDEA?<br/>
+		<h:selectOneMenu value="#{experience.ideExperience}">
+			<f:selectItem itemValue="0" itemLabel="0"/>
+			<f:selectItem itemValue="1" itemLabel="1"/>
+			<f:selectItem itemValue="2" itemLabel="2"/>
+			<f:selectItem itemValue="3" itemLabel="3"/>
+			<f:selectItem itemValue="4" itemLabel="4"/>
+			<f:selectItem itemValue="5" itemLabel="5"/>
+			<f:selectItem itemValue="6" itemLabel="6"/>
+			<f:selectItem itemValue="7" itemLabel="7"/>
+			<f:selectItem itemValue="8" itemLabel="8"/>
+			<f:selectItem itemValue="9" itemLabel="9"/>
+			<f:selectItem itemValue="10" itemLabel="10 ou mais"/>
+		</h:selectOneMenu>
+		<br/><br/>
+		Como você avalia seu atual nível de conhecimento no Eclipse, Netbeans e/ou Intellij IDEA?<br/>
+		<h:selectOneMenu value="#{experience.selfEvaluationIDE}">
+			<f:selectItem itemValue="0" itemLabel="não tenho conhecimento"/>
+			<f:selectItem itemValue="1" itemLabel="básico - uso esporadicamente / uso para desenvolver pequenos programas"/>
+			<f:selectItem itemValue="2" itemLabel="intermediário - uso com frequência moderada / uso para desenvolvimento de alguns programas grandes"/>
+			<f:selectItem itemValue="3" itemLabel="avançado - uso constantemente / uso para desenvolvimento de diversos programas grandes"/>
+		</h:selectOneMenu>
+		<br/><br/>
+		Há quantos anos você faz testes usando JUnit e/ou TestNG?<br/>
+		<h:selectOneMenu value="#{experience.testExperience}">
+			<f:selectItem itemValue="0" itemLabel="0"/>
+			<f:selectItem itemValue="1" itemLabel="1"/>
+			<f:selectItem itemValue="2" itemLabel="2"/>
+			<f:selectItem itemValue="3" itemLabel="3"/>
+			<f:selectItem itemValue="4" itemLabel="4"/>
+			<f:selectItem itemValue="5" itemLabel="5"/>
+			<f:selectItem itemValue="6" itemLabel="6"/>
+			<f:selectItem itemValue="7" itemLabel="7"/>
+			<f:selectItem itemValue="8" itemLabel="8"/>
+			<f:selectItem itemValue="9" itemLabel="9"/>
+			<f:selectItem itemValue="10" itemLabel="10 ou mais"/>
+		</h:selectOneMenu>
+		<br/><br/>
+		Como você avalia seu atual nível de conhecimento em JUnit e/ou TestNG?<br/>
+		<h:selectOneMenu value="#{experience.selfEvaluationJunit}">
+			<f:selectItem itemValue="0" itemLabel="não tenho conhecimento"/>
+			<f:selectItem itemValue="1" itemLabel="básico - tenho conhecimento teórico / uso somente para fins didáticos"/>
+			<f:selectItem itemValue="2" itemLabel="intermediário - uso com frequência moderada / uso somente em alguns programas"/>
+			<f:selectItem itemValue="3" itemLabel="avançado - uso constantemente"/>
+		</h:selectOneMenu>
+		<br/><br/>
+		<h:commandButton value="Enviar" action="#{experience.selectVM()}" />
+	</h:form>
+</h:body>
+
+</html>
